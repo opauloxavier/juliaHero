@@ -1,0 +1,136 @@
+\section{Resumo}
+
+\subsection{Funções de Sistemas de Recomendação}
+Vamos agora refinar a definição e funcionalidade prática dos SR.Existem diversas razões para que prestadores serviços queiram usar as tecnologias dos SR:
+
+\begin{itemize}
+
+  \item Aumentar o número de itens vendidos
+  \item Vender um número mais diverso de itens
+  \item Aumentar a satisfação do usuário
+  \item Aumentar a fidelidade do usuário
+  \item Entender melhor o que o usuário deseja
+
+\end{itemize}
+
+\par
+
+Esses são alguns motivos para que os prestadores de serviços queiram utilizar os SR, entretanto, para que um usuário queira usar o SR, é importante que o mesmo efetivamente ajude em suas tarefas e metas. Para isso é necessário que haja um equilíbrio entre os 2 lados (negócio e player) para que se ofereça um serviço que seja valoroso para ambos.
+
+\par
+
+Em um paper clássico, Herlocker et al. descreve 11 tarefas populares que um SR pode ajudar implementar. Algumas delas são consideradas tarefas principais ou essenciais associadas a um SR. Outras podem ser consideradas como ``Oportunistas''.
+
+\begin{itemize}
+
+  \item Achar alguns bons itens
+  \item Achar todos os bons itens
+  \item Anotações em contexto
+  \item Recomendar a Sequência
+  \item Recomendar um Bundle
+  \item Apenas Navegar
+  \item Achar um Recomendador Crível
+  \item Melhorar um perfil
+  \item Se expressar
+  \item Ajudar Outros
+  \item Influenciar Outros
+
+\end{itemize}
+
+\par
+
+Como esses diversos pontos indicam, o papel de um SR em um sistema de informação pode ser bastante diverso. Essa diversidade nas possibilidades vem do aproveitamento de diferente técnicas e fontes de informação que um SR precisa utilizar.
+
+\subsection{Fontes de Dados e Conhecimento}
+
+SR são sistemas de processamento de informação que colhem avitamente diversos tipos de dados para que possam construir suas recomendaçãoes. Dados são primariamente sobre itens para sugerir e os usuários que receberão essas recomendações. Mas, como os dados e fontes de conhecimento disponíveis para os SR podem ser muito diversos, se eles podem ser usados ou não depende da técnica de recomendação usada.
+
+\par
+
+De maneira geral, existem técnicas de recomendação que são ``knowledge-poor'', ou seja, usam dados muito simples e básicos, como avaliações de usuários para itens. Outras técnicas são muito mais dependendentes de dados, como por exemplo, recomendar atividades ou relações sociais para usuários. Em todos os casos, os dados usados pelos SR são classificados em 3 tipos: \emph{Itens, Usuários e Transações}.
+
+\begin{itemize}
+  \item \textbf{Itens.}  São os objetos que serão recomendados. Os itens podem ser caracterizados por sua complexidade e seu valor ou utilidade. O valor de um item pode ser positivo se o item é útil ao usuário, ou negativo se o item não é apropriado ou o usuário fez uma decisão errada ao selecioná-lo.
+
+  \item \textbf{Usuários.} Usuários em um SR podem ter diversos objetivos ou características. Para personalizar recomendações e a interação homem-computador, os SR exploram uma grande variedade de informações sobre os usuários. Essa informação pode ser estruturada de diversas maneiras e a seleção de qual informação será usado para o modelo depende da técnica de recomendação utilizada.
+
+  \item \textbf{Transações.} São clássificadas genéricamente como interações salvas entre um usuário e um SR. Transações são como logs e armazenam informações importantes geradas durante a interação homem-computador e são úteis para a geração da recomendação que o sistema está utilizando.
+    \par
+    Avaliações de usuário são a forma mais popular de dados de transação que um SR coleta. Essas avaliações podem ser explicítas ou implícitas.
+
+\end{itemize}
+
+\subsection{Técnicas de Recomendação}
+Para implementar sua função principal, e identificar os itens úteis a um usuário, um SR precisa \emph{prever} que um item vale a pena ser recomendado. Pra que isso ocorra, o sistema precisa ser capaz de prever a utilidade de alguns deles, ou pelo menos comparar a utilidade de alguns itens, e então decidir que itens para recomendar baseado nessa comparação.
+
+\par
+Para elicitar de forma superficial os diferentes tipos de SR, será usada a taxinomia usada em um paper que se tornou um jeito clássico de distinguir SR e como se referir aos mesmos. São 6 diferentes classes de abordagens:
+
+\begin{itemize}
+  \item \textbf{Content-based:} O sistema aprende a recomendar itens que são similares ao que o usuário gostou no passado. A similaridade dos itens é calculado baseado nas características associadas nos itens comparados.
+  \item \textbf{Collaborative filtering:} O mais simples e original implementação dessa abordagem recomenda ao usuário ativo os itens que outros usuários com preferências similares gostaram no passado. A similaridade em preferências de dois usuários é baseada na similaridade do histórico de avaliações dos mesmos.\emph{Collaborative filtering} é considerada a técnica de SR mais implementada e popular.
+  \item \textbf{Demographic:} Este tipo de sistema recomenda itens baseado no perfil demográfico do usuário. A suposição é que diferentes recomendações devem ser geradas para diferentes nichos demográficos.
+  \item \textbf{Knowledge-based:} Recomendam itens baseados em conhecimentos específicos de domínio sobre como certas características de itens atendem as necessidades de usuários e preferências, e principlamente, como um item é útil ao usuário. Os SR mais notáveis da categoria Knowledge-based são baseados em casos. Nesses sistemas a função de similaridade estima quanto as necessidades do usuário combinam com as recomendações(soluções para o problema).
+  \item \textbf{Community-based:} Esse tipo de sistema recomenda os itens baseado nas prefrências dos amigos do usuário. Evidências sugerem que as pessoas costumam confiar mais em recomendações de seus amigos do que em recomendações de pessoas similares porém anônimas. Essa observação, combinada com a crescente popularidade de redes sociais abertas tem gerado um crescente interesse em systemas baseados em comunidade, ou, como costumam ser chamados: \emph{Sistemas de recomendação sociais}.A recomendação é baseada em avaliações que foram fornecidos pelos amigos do usuário.
+  \item \textbf{Hybrid Recommender Systems:} Esses SR são baseados na combinação das técnicas mencionadas acima. Um sistema híbrido combina as técnicas A e B e tenta combinar as vantagens de A para reparar as desvantagens em B. Por exemplo, métodos de CF sofrem de problemas de novos itens(eles não podem recomendar itens que não possuem avaliações). Isso não limita as abordagens content-based visto que as previsões para novos itens é baseado em sua descrição e que são tipicamente facilmente obtidas.
+\end{itemize}
+
+\subsection{Aplicação e Avaliação}
+Pesquisas em SR estão sendo conduzidas com uma forte ênfase em aplicações práticas e comerciais, além de sua contribuição teórica, é geralemnte focada em aprimorar de maneira prática os SR comerciais. Logo as pesquisas, envolvem os asécticos praticos que aplicam a implementação desses sistemas. Esses aspectos são relevantes para diferentes estágios no ciclo de vida de um SR, conhecidos como: design do sistema, sua implementação e sua manutenção e aprimoramento durante a operação do mesmo.
+\par
+Os aspectos que influenciam no estágio do Design incluem fatores que podem afetar a escolha do algoritmo. O primeiro fator a se considerar, o domínio da aplicação, tem um efeito maior na abordagem algorítmica que deve ser tomada. Uma taxinomia para classificar os SR onde se encaixam as aplicações de SR mais comum são:
+
+\begin{itemize}
+  \item \textbf{Entretenimento -} recomendações para músicas, filmes e etc.
+  \item \textbf{Conteúdo -} Recomendações de Notícias personalizadas, webpages, documentos e etc.
+  \item \textbf{E-commerces -} Recomendações de produtos para serem comprados.
+  \item \textbf{Serviços -} Recomendações de serviços de viagens, de experts de consultorias, casas apra alugar etc.
+\end{itemize}
+
+\par
+O desenvolver de um SR para um certo domínio de uma aplicação deve entender as facetas específicas do domínio, seus requisitos, desafios de aplicação e limitações. Apenas após analisar esses fatores será possivel selecionar o algoritmo de recomendação ótimo e fazer o design de uma interação homem-computador efetiva.
+
+\subsection{Sistemas de Recomendação e Interação Homem Computador}
+
+Baseado no design e do algoritmo escolhido, e no calibração de diversos fontes de conhecimentos para conseguir melhores previsões sobre o que vai ser usado e quanto pelo usuário alvo, fica claro que as recomendações devem falar por si mesmas, e o usuário deve definitivamente aceitar as recomendações se elas estiverem corretas. Essa é uma afirmação extremamente simplificada para o problema das recomendações e não é tão fácil entregar as recomendações.
+
+\par
+Na prática, os usuários precisam de recomendações porque eles não possuem conhecimento suficiente para tomar uma decisão autonoma. Consequentemente, não é fácil para eles avaliar as recomendações propostas. Então, diversos pesquisadores tentaram entender os fatores que levaram a aceitação de uma recomendação por um usuário.
+
+\par
+Os seguintes pontos nos levam a introduzir alguns pontos importantes que foram levantados pela pesquisa de IHC:
+
+\begin{itemize}
+  \item \textbf{Confiança, Explicações e Persuasão}
+  \item \textbf{Sistemas com Conversação}
+  \item \textbf{Visualização}
+\end{itemize}
+
+\subsection{Sistemas de Recomendação como um Campo Multidisciplinar}
+
+Projetar e desenvolver um SR é um esforço multidisciplinar que tem se beneficiado de diversos resultados obtidos em vários campos de ciência da computação, especialmente aprendizado de máquina, mineração de dados, recuperação de dados e interação homem-compudaro.
+
+\par
+Aprendizado de máquina e mineração de dados, subcampos de inteligência artificial, permitem um computador aprender a desempenhar uma tarefa ótimamente usando exemplos, dados ou experiências passadas. Consequentemente, recomendações podem ser construídas usando informação disponibilizada por essas associações.
+\par
+Muitos SR são centrados pelo uso de diversos algoritmos de aprendizado de máquina e mineração de dados para prever as avaliações do usuário em itens, ou para aprender como ranquear corretamente os itens para um usuário.
+
+\subsection{Tópicos em Evidência e Desafios}
+
+É claro que as pesquisas em SR estão evoluindo em muitas e diversas direções e que novos tópicos estão emergindo ou se tornando assuntos mais importantes para investigação. Problemas como a aplicação prática desses SR e até mesmo proteção contra ataques que são lançados aos SR são temas extremamente desafiadores e amplamente estudados.
+
+\subsubsection{Desafios}
+A lista de novos e emergentes desafios para pesquisa em SR não são limitadas aos que foram descritos até então. Abaixo segue uma pequena lista de tópicos desafiadores que são considerados importantes no desenvolvimento de pesquisa de SR e que \emph{não} estão nesse handbook:
+
+\begin{itemize}
+  \item Escalabilidade dos algoritmos com datasets grandes e reais.
+  \item Sistemas de recomendação pró-ativos.
+  \item Sistemas de Recomendação que preservam a privacidade do usuário.
+  \item Diversidade dos itens recomendados ao usuário alvo.
+  \item Integração de Longo e médio prazos das preferências do usuário ao produzir uma lista de recomendações.
+  \item Modelos de usuários genéricos e de múltiplos domínios que são capazes de mediar os dados do usuário através de sistemas e aplicações diferentes.
+  \item Sistemas de Recomendação Distribuídos que são capazes de trabalhar em redes abertas.
+  \item Recomendadores que otimizem a sequencia de recomendações.
+  \item Recomendadores projetados para operar em dispositivos mobiles e com contexto de uso.
+  \item
+\end{itemize}
