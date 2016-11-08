@@ -1,0 +1,41 @@
+\section{Resumo}
+
+\subsection{Definição}
+\par
+\textit{Collaborative Filtering} é um algoritmo de recomendação popular que baseia suas predições e recomendações nas avaliações ou comportamento de outros usuários no sistema. A principal suposição por trás desse método é que as opiniões de outros uários podem ser selecionadas e agregadas de maneira que é possivel ter uma predição razoável das preferências um usuário alvo. Intuitivamente, assume-se também, que se os usuários concordam sobre a qualidade ou relevância de alguns itens, então eles também vão provavelmente concordar sobre outros itens.
+\par
+Dentro de \textit{Collaborative Filtering}, existem alguns conceitos que são necessários para descrever o domínio do problema e alguns requerimentos particulares de cada sistema. Muitos desses conceitos são também compartilhados por outros métodos de recomendação. São exemplos:
+
+\begin{itemize}
+
+  \item Domínio de Informação
+  \item Rating,User, Item
+  \item Rating Matrix
+  \item Predict
+
+\end{itemize}
+
+\par
+A grande maioria dos algoritmos de CF usados atualmente, operam inicialmente gerando predições de preferência usuário e então produizindo as recomendações deles ranqueando os itens candidatos por preferências previstas.
+
+\subsection{Tipos de Algoritmos de Filtragem Colaborativa}
+
+\par
+Algumas técnicas de recomendação por CF sofreram avanços recentes devido ao anteriormente citado \textit{``Prêmio Netflix''} e serão brevemente citadas nesse resumo:
+
+\subsubsection{Modelos de Fatorização de Matrizes}
+
+\par
+Modelos de Fatorização de Matrizes mapeam ambos usuários e itens em junção com um espaço articular latente de dimensão \textit{f},assim como interaçãoes usuário-item são modeladas como produtos internos nesse espaço. O espaço latente tenta explicar as avaliações por caracterização de ambos os fatores de porodutos e usuários automaticamente inferidos pelo feedback do usuário. Esses fatores podem ser de dimensões óbvias, como gêneros de filmes, ou dimensões menos bem definidas, como filmes ``mais adultos'', ou elementos completamente não interpretáveis.
+
+\subsubsection{Modelos de Vizinhança}
+\par
+É a abordagem mais comum para CF's. Em sua forma original, é compartilhado com virutalmente todos os CF iniciais é baseado em usuário-usuário. De maneira geral, essa abordagem possui muita popularidade, devido as seguintes características:
+
+\begin{itemize}
+
+  \item \textbf{Simplicidade:} São intuitivos e relativamente simples de implementar. Em sua forma mais simples, apenas um parametro (número de vizinhos usados na predição) necessita de ajuste.
+  \item \textbf{Justificabilidade:} Fornecem justificativas concisas e intuitivas para as predições computadas. Para alguns sistemas é de extrema importância que se explique as recomendações ao usuário.
+  \item \textbf{Eficiência:} Um dos pontos fortes dos métodos de vizinhança é sua eficiência. Diferentemente dos sistemas baseados em modelos, eles não precisam de fases de treinamento custosas, o que precisaria ser feito em intervalos frequentes em aplicações comerciais grandes.
+   \item \textbf{Estabilidade:} Outra propriedade útil nesse tipo de abordagem é que ele é pouco afetado pela adição constante de usuários, itens e avaliações.
+\end{itemize}

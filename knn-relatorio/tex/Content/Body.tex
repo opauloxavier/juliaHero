@@ -1,0 +1,7 @@
+\section{Definição}
+\par
+Sistemas de recomendação baseados em Vizinhos Mais Próximos automatizam o princípio de \textit{``word-of-mouth''}(boca-a-boca), onde um depende da opinião de outros indivíduos semelhantes ou outras fontes confiáveis para estimar o valor de um item de acordo com suas preferências.
+
+\subsection{User-based Rating Prediction}
+\par
+Métodos de recomendação baseados no usuário predizem a avaliação \textit{$r_{ui}} de um usuário \textit{u} para um novo item \textit{i} usando as avaliações dadas para \textit{i} pelos usuários mais semelhantes para \textit{u}, chamado de vizinhos mais próximos (K-nearest neighbours).Supondo que nós temos para cada usuário \textit{v} \neq \textit{u}  um valor \textit{w_{uv}} representando as similaridades das preferências entre \textit{u} e \textit{v}. Os k-vizinhos-mais-próoximos de \textit{u}, denotados por \textit{N(u)}, são os \textit{k} usuários \textit{v} com a maior similaridade  \textit{$w_{uv}} para \textit{u}. Entretanto, somente os usuários que avaliaram o item \textit{i} podem ser usados na predição de \textit{$r_{ui}}, e nós temos que ao invés de considerar os \textit{k} usuários mais similares para \textit{u} que \textit{avaliaram i}.
