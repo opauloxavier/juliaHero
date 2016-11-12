@@ -1,7 +1,24 @@
 \section{Definição}
 \par
-Sistemas de recomendação baseados em Vizinhos Mais Próximos automatizam o princípio de \textit{``word-of-mouth''}(boca-a-boca), onde um depende da opinião de outros indivíduos semelhantes ou outras fontes confiáveis para estimar o valor de um item de acordo com suas preferências.
-
-\subsection{User-based Rating Prediction}
+Sistemas de recomendação baseados em Vizinhos Mais Próximos ``automatizam'' o princípio de \textit{``word-of-mouth''}(boca-a-boca), onde um depende da opinião de outros indivíduos semelhantes ou outras fontes confiáveis para estimar o valor de um item de acordo com suas preferências. 
 \par
-Métodos de recomendação baseados no usuário predizem a avaliação \textit{$r_{ui}} de um usuário \textit{u} para um novo item \textit{i} usando as avaliações dadas para \textit{i} pelos usuários mais semelhantes para \textit{u}, chamado de vizinhos mais próximos (K-nearest neighbours).Supondo que nós temos para cada usuário \textit{v} \neq \textit{u}  um valor \textit{w_{uv}} representando as similaridades das preferências entre \textit{u} e \textit{v}. Os k-vizinhos-mais-próoximos de \textit{u}, denotados por \textit{N(u)}, são os \textit{k} usuários \textit{v} com a maior similaridade  \textit{$w_{uv}} para \textit{u}. Entretanto, somente os usuários que avaliaram o item \textit{i} podem ser usados na predição de \textit{$r_{ui}}, e nós temos que ao invés de considerar os \textit{k} usuários mais similares para \textit{u} que \textit{avaliaram i}.
+Existem 2 tipos de abordagens ao se trabalhar com vizinhos mais próximos, são elas: \textit{User-Based} e \textit{Item-Based}. A user-based usa usuários semelhantes para prever avaliações de um usuário $u$ e a item-based utiliza $rating$ de itens parecidos para prever avaliações do usuário sobre um determinado item $i$.
+
+\subsection{User-Based}
+Métodos de recomendação baseados no usuário predizem a avaliação $r_{ui}$ de um usuário $u$ para um novo item $i$ usando as avaliações dadas para $i$ pelos usuários mais semelhantes para $u$, chamado de vizinhos mais próximos (K-nearest neighbours).Supondo que nós temos para cada usuário $v \neq u$  um valor $w_{uv}$ representando as similaridades das preferências entre $u$ e $v$. 
+\par
+Os k-vizinhos-mais-próximos de $u$, denotados por $N(u)$, são os $k$ usuários $v$ com a maior similaridade  $w_{uv}$ para $u$. Entretanto, somente os usuários que avaliaram o item $i$ podem ser usados na predição de $r_{ui}$, e nós temos que ao invés de considerar os $k$ usuários mais similares para $u$ que \textit{avaliaram} $i$.
+
+\subsection{Item-Based}
+Enquanto métodos user-based se baseiam na opinião de usuários com pensamentos semelhantes para prever uma avaliação, abordagens item-based olham as avaliações dadas para itens similares.
+
+\subsection{Componentes do KNN}
+
+
+\section{Resultados}
+
+O dataset utilizado foi o do movielens 100k, e foi usado como treinamento 20\% da base e 80\% para ..
+
+\subsection{Item-Based}
+
+\subsection{User-Based}
