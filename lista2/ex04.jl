@@ -12,7 +12,7 @@ globalMean = mean(file_content[:,3])
 orderedContent = sort(file_content[:,2])
 
 ##intervalos de treinamento e teste
-training = find(r->r, shuffle([1:100000]) .> 20000)
+training = find(r->r, shuffle(1:100000) .> 20000)
 test = setdiff(1:100000,training)
 
 trainingContent = file_content[training,:]
@@ -28,6 +28,7 @@ function meansByItem(totalOrderedContent,testContent)
 
   for i=1:convert(Int64,totalOrderedContent[end])
       anterior=i
+      ratesOfItem = find(r->r==anterior,testContent[:,2])
       ratesOfItem = find(r->r==anterior,testContent[:,2])
     if(size(ratesOfItem)[1]==0)
         meanActualItem=globalMean
