@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  22 FEB 2017 20:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  23 FEB 2017 01:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -435,6 +435,44 @@ Now handling font encoding U ...
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count92
+\float@exts=\toks23
+\float@box=\box28
+\@float@everytoks=\toks24
+\@floatcapt=\box29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks25
+\c@algorithm=\count93
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count94
+\c@ALG@rem=\count95
+\c@ALG@nested=\count96
+\ALG@tlm=\skip44
+\ALG@thistlm=\skip45
+\c@ALG@Lnr=\count97
+\c@ALG@blocknr=\count98
+\c@ALG@storecount=\count99
+\c@ALG@tmpcounter=\count100
+\ALG@tmplength=\skip46
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
 Document Class 'sig-alternate' <23rd. May '12>. Modified by G.K.M. Tobin/Gerry 
 Murray
 Based in part upon document Style `acmconf' <22 May 89>. Hacked 4/91 by
@@ -447,22 +485,22 @@ Questions on the style, SIGS policies, etc. to Adrienne Griscti griscti@acm.org
 \footheight=\dimen115
 \@maxsep=\dimen116
 \@dblmaxsep=\dimen117
-\aucount=\count92
-\originalaucount=\count93
+\aucount=\count101
+\originalaucount=\count102
 \auwidth=\dimen118
 \auskip=\dimen119
-\auskipcount=\count94
+\auskipcount=\count103
 \auskip=\dimen120
 \allauboxes=\dimen121
-\addauthors=\toks23
-\addauflag=\count95
-\subtitletext=\toks24
-\savesection=\count96
-\sectioncntr=\count97
-\c@figure=\count98
-\c@table=\count99
-\titleboxnotes=\toks25
-\titleboxnoteflag=\count100
+\addauthors=\toks26
+\addauflag=\count104
+\subtitletext=\toks27
+\savesection=\count105
+\sectioncntr=\count106
+\c@figure=\count107
+\c@table=\count108
+\titleboxnotes=\toks28
+\titleboxnoteflag=\count109
 Document Class: sig-alternate 2012/05/23 - V2.5 - based on acmproc.cls V1.3 <No
 v. 30 '99>
 (/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
@@ -471,32 +509,32 @@ Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-\@acmtitlebox=\box28
-\titlenotecount=\count101
-\tntoks=\toks26
-\tntokstwo=\toks27
-\tntoksthree=\toks28
-\tntoksfour=\toks29
-\tntoksfive=\toks30
-\catcount=\count102
-\copyrightnotice=\toks31
-\conf=\toks32
-\confinfo=\toks33
-\c@part=\count103
-\c@section=\count104
-\c@subsection=\count105
-\c@subsubsection=\count106
-\c@paragraph=\count107
+\@acmtitlebox=\box30
+\titlenotecount=\count110
+\tntoks=\toks29
+\tntokstwo=\toks30
+\tntoksthree=\toks31
+\tntoksfour=\toks32
+\tntoksfive=\toks33
+\catcount=\count111
+\copyrightnotice=\toks34
+\conf=\toks35
+\confinfo=\toks36
+\c@part=\count112
+\c@section=\count113
+\c@subsection=\count114
+\c@subsubsection=\count115
+\c@paragraph=\count116
 
 Using 'Abbrev' bibliography style
-LaTeX Info: Redefining \cite on input line 1214.
+LaTeX Info: Redefining \cite on input line 1217.
 \bibindent=\dimen122
-\colcntr=\count108
-\saveb@x=\box29
-\copyrtyr=\toks34
-\acmcopyr=\toks35
-\boilerplate=\toks36
-\copyrightetc=\toks37
+\colcntr=\count117
+\saveb@x=\box31
+\copyrtyr=\toks37
+\acmcopyr=\toks38
+\boilerplate=\toks39
+\copyrightetc=\toks40
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
@@ -526,17 +564,17 @@ LaTeX Font Info:    ... okay on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count109
+\scratchcounter=\count118
 \scratchdimen=\dimen123
-\scratchbox=\box30
-\nofMPsegments=\count110
-\nofMParguments=\count111
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count112
+\scratchbox=\box32
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count121
 \MPscratchDim=\dimen124
-\MPnumerator=\count113
-\makeMPintoPDFobject=\count114
-\everyMPtoPDFconversion=\toks39
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks42
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -585,44 +623,44 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 26.
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 26.
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 26.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Overfull \hbox (5.51857pt too wide) in paragraph at lines 26--26
+Overfull \hbox (5.51857pt too wide) in paragraph at lines 29--29
  []\affaddr contato.pauloxavier@gmail.com| 
  []
 
 
-Overfull \hbox (7.80998pt too wide) in paragraph at lines 41--44
+Overfull \hbox (7.80998pt too wide) in paragraph at lines 44--47
 \T1/aer/m/n/9 de out-ros uários po-dem ser se-le-cionadas ea-gre-gadas de manei
 ra
  []
 
 
-Overfull \hbox (15.63136pt too wide) in paragraph at lines 53--54
+Overfull \hbox (15.63136pt too wide) in paragraph at lines 56--57
 []\T1/aer/m/n/9 Não ne-ces-si-tam de in-for-mações so-bre con-teúdo ou usuários
 .
  []
 
 
-Overfull \hbox (1.51778pt too wide) in paragraph at lines 60--61
+Overfull \hbox (1.51778pt too wide) in paragraph at lines 63--64
 []\T1/aer/m/n/9 Ratings são da-dos ex-plici-ta-mente por usuários, gerando
  []
 
 
-Overfull \hbox (12.76791pt too wide) in paragraph at lines 69--70
+Overfull \hbox (12.76791pt too wide) in paragraph at lines 72--73
 []\T1/aer/m/it/9 Ruído Nat-u-ral\T1/aer/m/n/9 , in-vo-lu-tari-a-mente in-tro-du
 zido por usuários,
  []
@@ -631,33 +669,62 @@ zido por usuários,
 
 
 ]
-Overfull \hbox (3.93222pt too wide) in paragraph at lines 137--137
+<table_toledo.jpg, id=13, 372.53464pt x 149.70215pt>
+File: table_toledo.jpg Graphic file (type jpg)
+ <use table_toledo.jpg>
+Package pdftex.def Info: table_toledo.jpg used on input line 95.
+(pdftex.def)             Requested size: 240.0pt x 96.44177pt.
+
+<detec_ruido_toledo.jpg, id=14, 369.09322pt x 534.28178pt>
+File: detec_ruido_toledo.jpg Graphic file (type jpg)
+
+<use detec_ruido_toledo.jpg>
+Package pdftex.def Info: detec_ruido_toledo.jpg used on input line 105.
+(pdftex.def)             Requested size: 240.0pt x 347.42578pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<correcao_toledo.jpg, id=15, 379.4175pt x 230.57571pt>
+File: correcao_toledo.jpg Graphic file (type jpg)
+
+<use correcao_toledo.jpg>
+Package pdftex.def Info: correcao_toledo.jpg used on input line 114.
+(pdftex.def)             Requested size: 240.0pt x 145.85101pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <./table_toledo.jpg> <./detec_ruido_toledo.jpg> <./correcao_toledo.jpg>]
+Overfull \hbox (3.93222pt too wide) in paragraph at lines 152--152
 []\secfnt CONCLUSÃO E TRA-BAL-HOS FU-TUROS 
  []
 
-[2] (./sig-alternate.aux) ) 
+[3
+
+] (./sig-alternate.aux) ) 
 Here is how much of TeX's memory you used:
- 3148 strings out of 493029
- 38423 string characters out of 6136234
- 107497 words of memory out of 5000000
- 6596 multiletter control sequences out of 15000+600000
+ 3772 strings out of 493029
+ 47403 string characters out of 6136234
+ 116378 words of memory out of 5000000
+ 7197 multiletter control sequences out of 15000+600000
  51075 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,28p,687b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/
-8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
-elvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on sig-alternate.pdf (2 pages, 123198 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r
+.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/hel
+vetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on sig-alternate.pdf (3 pages, 237592 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 58 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

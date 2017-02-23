@@ -23,6 +23,9 @@
 \additionalauthors{}
 \date{22 fevereiro 2017}
 
+\copyrtyr={2017} 
+\global\acmcopyr={}
+
 \maketitle
 
 \begin{abstract}
@@ -38,7 +41,7 @@ Em SR é assumido que as avaliações nos \emph{datasets} estão livres de irreg
 O artigo será organizado da seguinte forma: Seção 3 faz uma revisão de filtragem colaborativa. Seção 4 elicita o problema e faz uma proposta para quantificar o impacto do ruído nos modelos e qual o desempenho dos algoritmos \emph{Mahony} e \emph{Toledo} na detecção de ruído natural. Seção 5 faz uma discussão sobre os experimentos feitos para avaliar o impacto do ruído nos modelos, apresenta os resultados e mostra o \emph{dataset} utilizado para o artigo, além da metodologia usada para obtenção dos resultados obtidos. A seção 5 apresenta uma conclusão sobre os resultados obtidos e propostas para trabalhos futuros sobre o tema.
 
 \section{Filtragem Colaborativa}
-Collaborative Filtering é um algoritmo de recomendação popular que baseia suas predições e
+\emph{Filtragem Colaborativa} é um algoritmo de recomendação popular que baseia suas predições e
 recomendações nas avaliações ou comportamento de outros usuários no sistema. A principal
 suposição por trás desse método é que as opiniões de outros uários podem ser selecionadas eagregadas de maneira que é possivel ter uma predição razoável das preferências um usuário alvo.
 
@@ -60,7 +63,7 @@ Possui também algumas desvantagens, dentre elas:
 	\item Ratings são dados explicitamente por usuários, gerando uma base de dados ruidosa por natureza (\emph{ruído natural e/ou ruído malicioso}).
 \end{itemize}
 
-\section{Problema/Proposta}
+\section{Proposta}
 Em SR é assumido que as avaliações nos \emph{datasets} estão livres de irregularidades. Foi mostrado recentemente que os usuários podem ser inconsistentes quando eles elicitam avaliações para itens, expondo os dados usados nos SR à inconsistências.
 
 Ruído em SR pode ser classificado em 2 categorias principais:
@@ -75,43 +78,46 @@ A identificação do \emph{ruído natural} é mais difícil, pois ele tende a ap
 	
 Neste artigo serão usados dois algoritmos para quantificação do impacto do ruído no modelo, \emph{O'Mahony} e \emph{Toledo}.
 
+\subsection{O'Mahony}
 O algoritmo de \emph{O'Mahony} considera o quão consistente o rating atual para um par usuário-item é em respeito a avaliação prevista que é feita por algum algoritmo de recomendação G.
  
 A \emph{consistência} c de uma avaliação $r_{u,v}$ como o Erro Médio Absoluto (MAE) entre a avaliação atual e a prevista:
 	$$ c(G,T)_{u,v} = \frac{|{u,v} - p_{u,v}|}{r_{max} - r_{min}} $$
 
 onde $p_{u,v}$ é a avaliação prevista para o par usuário-item ($u,v$) e $r_{min}/r_{max}$ são o mínimo e máximo dos ratings permitidos, respecivamente. Uma avaliação $r_{u,v}$ é considerada como ruído e excluída do processo de recomendação se:
-	$$ c(G,T)_{u,v} > th $$
+$$ c(G,T)_{u,v} > th $$
 onde $th$ é um valor \emph{threshold}.
+\subsection{Toledo}
+O algoritmo proposto por \emph{Toledo} inicialmente classifica avaliações, usuários e itens, e que cada item também sua própria tendência de receber avaliações. São identificadas e classificadas conforme a figura 1.
 
-O algoritmo proposto por \emph{Toledo} inicialmente classifica avaliações, usuários e itens, e que cada item também sua própria tendência de receber avaliações. São identificadas quatro tendências possíveis para usuários e itens:
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\linewidth]{table_toledo}
+\caption{Toledo - Classes de Itens e Usuários}
+\label{Figura 1}
+\end{figure}
 
-\textbf{Usuário: }
-\begin{itemize}
-	\item \emph{Positivo:} usuário tende a avaliar todos os itens positivamente.
-	\item \emph{Médio:} tende a avaliar com valores médios.
-	\item \emph{Negativo:} tende a avaliar com valores baixos.
-	\item \emph{Hesitante:} usuário oscila entre as categorias anteriores e não pertence a uma específica.
-\end{itemize}
 
-\textbf{Item: }
-\begin{itemize}
-	\item \emph{Bem Avaliado}
-	\item \emph{Médio Avaliado}
-	\item \emph{Mal Avaliado}
-	\item \emph{Duvidoso}
-\end{itemize}
+O processo para detecção do ruído assume que para um rating $r(u,i)$ de um dataset, se as classes associadas ao usuário $u$ e o item $i$ pertencem ao meso grupo, então a avaliação deve pertencer a classe de avaliação no mesmo grupo. Se a avaliação não estiver de acordo com a condição, poderia ser uma avaliação ruidosa, e sua transformação poderia mitigar o ruído natural do dataset. Conforme \emph{figura 2}. 
 
-\textbf{Avaliações: }
-\begin{itemize}
-	\item \emph{Forte: } se $r(u,i) \geq v$.
-	\item \emph{Médio: } se $k \leq r(u,i) < v$.
-	\item \emph{Fraco:} se $r(u,i) < k$.
-\end{itemize}
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\linewidth]{detec_ruido_toledo}
+\caption{Toledo - Detecção de ruído}
+\label{Figura 2}
+\end{figure}
 
-O processo para detecção do ruído assume que para um rating $r(u,i)$ de um dataset, se as classes associadas ao usuário $u$ e o item $i$ pertencem ao meso grupo, então a avaliação deve pertencer a classe de avaliação no mesmo grupo. Se a avaliação não estiver de acordo com a condição, poderia ser uma avaliação ruidosa, e sua transformação poderia mitigar o ruído natural do dataset. 
+Após detectar as possíveis avaliações ruidosas a próxima fase lida com essas avaliações, corrigindo a anomalia ao invés de removê-la para evitar perda de informação. Conforme \emph{figura 3}.
 
-Após detectar as possíveis avaliações ruidosas a próxima fase lida com essas avaliações, corrigindo a anomalia ao invés de removê-la para evitar perda de informação.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\linewidth]{correcao_toledo}
+	\caption{Toledo - Correção de ruído}
+	\label{fig:correcao_toledo}
+\end{figure}
+
+Conforme literatura, não há disponível nenhum \emph{dataset} que não possua ruído natural, logo para testar a acurácia dos algoritmos não é possível usar um \emph{dataset} totalmente apropriado. Para fins desse artigo, iremos considerar que o \emph{dataset} que utilizamos não possui ruído, e a partir do mesmo iremos inserir ruído malicioso na base e em seguida testar a acurácia dos mesmos usando o \emph{Precision} e \emph{Recall}.
+
 
 \section{Experimentos}
 
@@ -123,13 +129,22 @@ Consiste de 943 usuários, 1682 filmes e contém 100,000 avaliações no total. 
 
 \subsection{Metodologia}
 
-10\% treinamento -> gerar ruidos aqui
+A inserção do ruído será feita aleatoriamente iterando de 1 a 10\% da base e executando os algoritmos de \emph{Toledo} e \emph{O'Mahony} para detectar o número de avaliações que foi marcada como ruído no mesmo. Essa inserção será feita invertendo-se as notas na base, transformando ratings de acordo com a tabela abaixo:
 
-90\% teste
-
-Usando Precision recall f1 (comparando a previsão sem ruído/com ruído e checar a \% de ruidos)
-
-Algoritmos: Mahony e Toledo
+\begin{table}[h!]
+	\centering
+	\label{my-label}
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Rating} & \textbf{Novo Valor} \\ \hline
+		\textit{1}      & 5                   \\ \hline
+		\textit{2}      & 4                   \\ \hline
+		\textit{3}      & 1                   \\ \hline
+		\textit{4}      & 2                   \\ \hline
+		\textit{5}      & 1                   \\ \hline
+	\end{tabular}
+	\caption{Troca de Ratings na Inserção de Ruído}
+\end{table}
 
 
 \subsection{Resultados}
